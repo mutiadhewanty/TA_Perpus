@@ -63,9 +63,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="inner-content">
-          <p>Copyright &copy; 2020 Sixteen Clothing Co., Ltd.
-        
-        - Design: <a rel="nofollow noopener" target="_blank">TemplateMo</a></p>
+          <p>Copyright &copy; 2021 pubBrary
         </div>
       </div>
     </div>
