@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,32 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::group(['middleware' => 'auth'], function (){
+//     Route::group(['middleware' => 'role:admin'], function (){
+//         Route::get('/admin', function() {
+//             return 'Haloo Admin';
+//         });
+//     });
+
+//     Route::group(['middleware' => 'role:user'], function (){
+//         Route::get('/home', function() {
+//             return 'user';
+//         });
+//     });
+// });
+
+Route::group(['middleware' => 'auth', 'role:admin'], function (){   
+        Route::get('/admin', function() {
+            return view('admin');
+        });
+    });
+
+    Route::group(['middleware' => 'auth', 'role:user'], function (){
+        Route::get('/home', function() {
+            return view('home');
+        });
+    });
+
+
