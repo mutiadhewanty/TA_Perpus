@@ -88,7 +88,7 @@
 													</tr>
 												</tfoot>
 												<tbody>
-													@foreach($kategori_admin as $katAdmin)		
+													@foreach($kategori as $katAdmin)		
 													<tr>
 														<td>{{ $katAdmin->id }}</td>
 														<td>{{ $katAdmin->nama_kategori }}</td>

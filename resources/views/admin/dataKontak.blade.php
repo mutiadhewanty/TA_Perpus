@@ -12,7 +12,7 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/homeAdmin">Home</a>
+                <a class="nav-link" href="/homeadmin">Home</a>
               </li> 
               <li class="nav-item">
                 <a class="nav-link" href="/dataBuku">Data Buku</a>

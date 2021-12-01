@@ -13,11 +13,12 @@ class KategoriAdmin extends Controller
      */
     
     public function index(){
-        // $kategori_admin = KategoriAdmin::all(); 
-        // return view('admin/dataKategori',compact('kategoriAdmin'));
 
-        $post = modelKatAdmin::all();
-        return view('admin/dataKategori',compact('post'));
+        // $post = model_KatAdmin::all();
+        // return view('admin/dataKategori',compact('post'));
+
+        $kategori = KategoriAdmin::all();
+        return view('admin/dataKategori', compact('kategori'));
     }
     /**
      * Show the form for creating a new resource.
